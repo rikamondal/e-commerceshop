@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+input {
+  padding: 8px;
+  width: 300px;
+}
+button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+}

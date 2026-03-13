@@ -1,0 +1,45 @@
+/* SLIDER WRAPPER */
+.swiper {
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* SLIDE ITEM */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE STYLE */
+.swiper-slide img {
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* HOVER ZOOM EFFECT */
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .swiper-slide img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide img {
+    height: 250px;
+  }
+}
+
+/* DARK MODE SUPPORT */
+.dark .swiper-slide img {
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+}
