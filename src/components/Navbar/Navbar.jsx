@@ -11,7 +11,7 @@ import AuthModal from "../AuthModal/AuthModal";
 const Navbar = () => {
   const { cart, wishlist } = useContext(ShopContext);
   const { dark, setDark } = useContext(ThemeContext);
-  const [search, setSearch] = useState("");
+  const { search, setSearch } = useContext(ShopContext);
   const navigate = useNavigate();
 
 const [showAuth,setShowAuth]=useState(false)
@@ -53,7 +53,11 @@ const [profile,setProfile]=useState(false)
 
 {/* SEARCH */}
 <div className="search">
-<input placeholder="Search for products..." />
+<input
+placeholder="Search for products..."
+value={search}
+onChange={(e)=>setSearch(e.target.value)}
+/>
 </div>
 
 {/* ICONS */}
@@ -103,3 +107,78 @@ Login
 // };
 
 export default Navbar;
+
+
+
+
+// import React, { useContext, useState } from "react";
+// import { Link } from "react-router-dom";
+// import { ShopContext } from "../../context/ShopContext";
+// import { FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
+// import "./Navbar.css";
+// import AuthModal from "../AuthModal/AuthModal";
+
+// const Navbar = () => {
+
+// const { cart, wishlist, search, setSearch } = useContext(ShopContext)
+
+// const [showAuth,setShowAuth] = useState(false)
+// const [mobileMenu,setMobileMenu] = useState(false)
+
+// return (
+
+// <>
+// <nav className="navbar">
+
+// {/* LOGO */}
+// <Link to="/" className="logo">DressShop</Link>
+
+
+
+// {/* MENU */}
+// <ul className={`nav-links ${mobileMenu ? "active" : ""}`}>
+
+// <li><Link to="/men">Men</Link></li>
+// <li><Link to="/women">Women</Link></li>
+// <li><Link to="/girls">Girls</Link></li>
+// <li><Link to="/boys">Boys</Link></li>
+
+// </ul>
+
+// {/* SEARCH */}
+// <div className="search">
+// <input
+// placeholder="Search for products..."
+// value={search}
+// onChange={(e)=>setSearch(e.target.value)}
+// />
+// </div>
+
+// {/* ICONS */}
+// <div className="icons">
+
+// <Link to="/wishlist" className="icon">
+// <FaHeart/>
+// <span>{wishlist.length}</span>
+// </Link>
+
+// <Link to="/cart" className="icon">
+// <FaShoppingCart/>
+// <span>{cart.length}</span>
+// </Link>
+
+// <FaUser onClick={()=>setShowAuth(true)} />
+
+// </div>
+
+// </nav>
+
+// {showAuth && <AuthModal close={()=>setShowAuth(false)} />}
+
+// </>
+
+// )
+
+// }
+
+// export default Navbar

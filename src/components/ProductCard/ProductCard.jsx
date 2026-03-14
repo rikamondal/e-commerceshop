@@ -20,7 +20,8 @@ const ProductCard = ({ product }) => {
       return;
     }
 
-    alert("Product Added To Cart");
+   addToCart(product);
+
 
   };
 
