@@ -12,6 +12,7 @@ const Cart = () => {
 
   return (
     <div>
+      //hiii
       <h2>Your Cart</h2>
 
       {cart.map((item) => (
