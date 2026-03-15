@@ -99,7 +99,7 @@ cursor:pointer;
 display:flex;
 } */
 
- .mega-menu{
+ /* .mega-menu{
 position:absolute;
 top:30px;
 left:0;
@@ -117,7 +117,7 @@ margin-bottom:10px;
 .mega-menu p{
 cursor:pointer;
 margin:5px 0;
-}
+} */
 
 .logo{
 font-size:24px;
@@ -130,7 +130,7 @@ animation: logoGlow 3s infinite alternate;
 @keyframes logoGlow{
 
 0%{
-color:#000;
+color:#27db78;
 transform:scale(1);
 }
 
@@ -140,13 +140,15 @@ transform:scale(1.05);
 }
 
 100%{
-color:#000;
+color:#2914b3;
 transform:scale(1);
 }
 
 }  
 
-
+.nav-links a:hover{
+color:#ff4d6d;
+} 
 
  
 

@@ -9,7 +9,8 @@ const Home = () => {
   const { products } = useContext(ShopContext);
   const [filters, setFilters] = useState({});
 
-  let filtered = [...products];
+  // let filtered = [...products];
+  let filtered = products ? [...products] : [];
 
   if (filters.price === "low")
     filtered.sort((a,b)=>a.price-b.price);
@@ -24,7 +25,7 @@ const Home = () => {
       <Slider />
       
       <Filters setFilters={setFilters} />
-<h2 className="c">All Products</h2>
+<h1>All Products</h1>
       <div className="grid">
         {filtered.map(product => (
           <ProductCard key={product.id} product={product} />
@@ -35,3 +36,7 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
